@@ -1,8 +1,8 @@
-:root{
-    --primary-color: #adf0d4;
-    --secondary-color: #1fd8a4;
-    --bg-color: #0d1512;
-}
+:root {
+    --primary-color: #e4e4e7;      /* Soft Ice Gray */
+    --secondary-color: #14b8a6;    /* Cool Teal / Glow Aqua */
+    --bg-color: #1e293b;           /* Space Blue / Deep Slate */
+  }
 
 *{
     margin: 0;
@@ -65,6 +65,7 @@ main, section, .nameContainer{
 
 main{
     gap: 64px;
+    padding-bottom: 80px;
 }
 
 section{
@@ -78,6 +79,7 @@ section{
 
 .statsContainer{
     display: flex;
+    flex-direction: column;
     align-items: stretch;
     gap: 24px;
 }
@@ -97,6 +99,7 @@ section{
 .stats {
     display: flex;
     flex-direction: column;
+    gap: 14px;
 }
 
 .stats > div {
@@ -118,4 +121,96 @@ section{
 
 .aboutMe{
     line-height: 1.5em;
+}
+
+.outreach {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    width: fit-content;
+    margin-right: auto;
+}
+
+.outreach:hover {
+    opacity: 0.7;
+}
+
+.outreach i {
+    transform: rotate(-45deg);
+}
+
+.projectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.headerText {
+    margin-bottom: 24px;
+}
+
+.projectItem {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.projectItem> div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.projectItem> div:last-child {
+    width: 20%;
+    max-height: 120px; /* Reduced width = smaller image */
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.projectItem> div:last-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.linkcontainer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.linkItem{
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 14px !important;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.linkItem:hover {
+    opacity: 0.7;
+}
+
+.linkItem p {
+    font-size: 0.9em;
+}
+
+@media (min-width:640px) {
+    .statsContainer {
+        flex-direction: row;
+    }
+    .stats {
+        gap: 0px;
+    }
+    .aboutMe {
+        width: 80%;
+        margin-right: auto;
+    }
 }
